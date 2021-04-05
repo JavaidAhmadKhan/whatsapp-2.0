@@ -1,16 +1,14 @@
 import Head from "next/head";
-import styled from "styled-components";
-
-import Sidebar from "../components/Sidebar/Sidebar";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
-        <title>Whatsapp 2.0</title>
+        <title>Whatsapp2.0</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Sidebar />
+      <h1>Whatsapp Clone</h1>
     </div>
   );
 }

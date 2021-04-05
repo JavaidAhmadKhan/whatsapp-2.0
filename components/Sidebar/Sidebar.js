@@ -1,0 +1,13 @@
+import { Container, Header } from "./sidebar.styles";
+
+function Sidebar() {
+  return (
+    <Container>
+      <Header>
+          
+      </Header>
+    </Container>
+  );
+}
+
+export default Sidebar;
