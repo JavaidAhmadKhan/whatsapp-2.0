@@ -1,0 +1,28 @@
+import { useEffect } from "react";
+import firebase from "firebase";
+
+import "../styles/globals.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Login from "./login";
+import { auth, db } from "../firebase";
+import Loading from "../components/Sidebar/Loading/Loading";
+
+function MyApp({ Component, pageProps }) {
+  const [user, loading] = useAuthState(auth);
+
+  useEffect(() => {
+    if (user) {
+      db.collection("users").doc(user.uid).set({
+        email: user.email,
+        lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+    }
+  }, [user]);
+
+  if (loading) return <Loading />;
+  if (!user) return <Login />;
+
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
