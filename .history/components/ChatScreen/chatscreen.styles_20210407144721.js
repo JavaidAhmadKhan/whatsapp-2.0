@@ -1,0 +1,16 @@
+import styled from "styled-components";
+
+export const Container = styled.div``;
+
+export const Header = styled.div`
+  position: sticky;
+  background-color: white;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  padding: 11px
+`;
+
+export const HeaderInformation = styled.div``;
+
+export const HeaderIcons = styled.div``;
