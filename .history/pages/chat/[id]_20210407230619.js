@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
+
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ChatScreen from "../../components/ChatScreen/ChatScreen";
 import { auth, db } from "../../firebase";
@@ -57,11 +58,13 @@ export async function getServerSideProps(context) {
   };
 }
 
-const Container = styled.div`
+
+
+ const Container = styled.div`
   display: flex;
 `;
 
-const ChatContainer = styled.div`
+ const ChatContainer = styled.div`
   flex: 1;
   overflow: scroll;
   height: 100vh;

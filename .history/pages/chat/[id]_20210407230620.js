@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
+
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ChatScreen from "../../components/ChatScreen/ChatScreen";
 import { auth, db } from "../../firebase";
